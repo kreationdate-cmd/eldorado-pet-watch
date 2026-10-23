@@ -1,6 +1,6 @@
 {
- "time_utc": "2026-10-23T07:01:35+00:00",
- "total_listings": 982,
+ "time_utc": "2026-10-23T07:06:15+00:00",
+ "total_listings": 983,
  "pet_listings": 490,
  "deal_rule": "30%+ below the 25th-percentile price of other listings for the same pet+variant, and saves $1.00+",
  "deals": [
@@ -16,14 +16,15 @@
    "pet": "Reanimation",
    "variant": "Shiny",
    "key": "Reanimation | Shiny",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00",
    "baseline_usd": 24.49,
    "median_of_others": 25.0,
    "saving_usd": 17.82,
    "discount_pct": 72.8,
-   "comparables": 3
+   "comparables": 3,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "bf0677a6-0f9d-454d-d27e-08df302c5f5a",
@@ -44,7 +45,8 @@
    "median_of_others": 62.5,
    "saving_usd": 37.49,
    "discount_pct": 71.4,
-   "comparables": 6
+   "comparables": 6,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "787e5bf5-564d-45d8-c9c8-08df2b834a19",
@@ -53,19 +55,20 @@
    "stock": 1,
    "seller": "Alex-g08",
    "seller_feedback_pct": 99.3,
-   "seller_reviews": 1069,
+   "seller_reviews": 1070,
    "url": "https://www.eldorado.gg/tap-simulator-shop/oi/787e5bf5-564d-45d8-c9c8-08df2b834a19",
    "pet": "Infernal Lord",
    "variant": "Normal",
    "key": "Infernal Lord | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00",
    "baseline_usd": 2.0,
-   "median_of_others": 3.49,
+   "median_of_others": 3.25,
    "saving_usd": 1.0,
    "discount_pct": 50.0,
-   "comparables": 46
+   "comparables": 46,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "ffc6a902-372b-4e23-3e2c-08df302c5e97",
@@ -86,7 +89,8 @@
    "median_of_others": 4.39,
    "saving_usd": 1.63,
    "discount_pct": 45.0,
-   "comparables": 11
+   "comparables": 11,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "a88de93f-4ae1-4f54-a71a-08df2b834b26",
@@ -107,7 +111,8 @@
    "median_of_others": 4.39,
    "saving_usd": 1.63,
    "discount_pct": 45.0,
-   "comparables": 11
+   "comparables": 11,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "33861c26-9a4a-41c2-5bde-08df302c5ef4",
@@ -128,7 +133,8 @@
    "median_of_others": 18.49,
    "saving_usd": 7.21,
    "discount_pct": 41.9,
-   "comparables": 3
+   "comparables": 3,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "347ac44f-3bfc-4256-22a5-08df302c5e8d",
@@ -149,7 +155,8 @@
    "median_of_others": 11.5,
    "saving_usd": 3.09,
    "discount_pct": 38.7,
-   "comparables": 5
+   "comparables": 5,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "0a13f4af-06b0-4229-221c-08df302c5e75",
@@ -170,7 +177,8 @@
    "median_of_others": 5.0,
    "saving_usd": 1.5,
    "discount_pct": 37.6,
-   "comparables": 42
+   "comparables": 42,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "7d423a54-b830-4a33-012b-08df2f5e7ec7",
@@ -191,7 +199,8 @@
    "median_of_others": 5.0,
    "saving_usd": 1.49,
    "discount_pct": 37.3,
-   "comparables": 42
+   "comparables": 42,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "8612ce5a-9fcf-4166-b9a4-08df302c5e8e",
@@ -212,7 +221,8 @@
    "median_of_others": 4.33,
    "saving_usd": 1.13,
    "discount_pct": 36.3,
-   "comparables": 14
+   "comparables": 14,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "d7b5af8c-31d1-4e85-9568-08df2b834aae",
@@ -233,7 +243,8 @@
    "median_of_others": 4.33,
    "saving_usd": 1.13,
    "discount_pct": 36.3,
-   "comparables": 14
+   "comparables": 14,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "f9439475-51d3-47f8-a14f-08df2e9a9833",
@@ -254,7 +265,8 @@
    "median_of_others": 4.33,
    "saving_usd": 1.12,
    "discount_pct": 35.9,
-   "comparables": 14
+   "comparables": 14,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "27cf04c0-34f6-4e98-3598-08df302c5e9d",
@@ -275,7 +287,8 @@
    "median_of_others": 11.5,
    "saving_usd": 3.48,
    "discount_pct": 34.9,
-   "comparables": 6
+   "comparables": 6,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "ef259d78-d69e-48ba-59c0-08df2b834a06",
@@ -296,7 +309,8 @@
    "median_of_others": 11.5,
    "saving_usd": 3.48,
    "discount_pct": 34.9,
-   "comparables": 6
+   "comparables": 6,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "f7b80d7d-83de-4c9f-3c70-08df302c5e74",
@@ -317,7 +331,8 @@
    "median_of_others": 5.0,
    "saving_usd": 1.34,
    "discount_pct": 33.6,
-   "comparables": 42
+   "comparables": 42,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "b9febb72-d6e7-4e66-d3e3-08df2dd1d425",
@@ -338,7 +353,8 @@
    "median_of_others": 5.0,
    "saving_usd": 1.32,
    "discount_pct": 33.1,
-   "comparables": 42
+   "comparables": 42,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   },
   {
    "id": "5ca41a5e-68ff-4cce-b830-08df2f5ec1ee",
@@ -359,7 +375,8 @@
    "median_of_others": 4.39,
    "saving_usd": 1.12,
    "discount_pct": 30.9,
-   "comparables": 11
+   "comparables": 11,
+   "deal_since": "2026-10-23T07:06:15+00:00"
   }
  ],
  "unknown_pet_titles": [
@@ -593,7 +610,7 @@
    "count": 47,
    "min": 1.0,
    "p25": 2.0,
-   "median": 3.49
+   "median": 3.0
   },
   {
    "key": "Infernal Lord | Shiny",
@@ -619,7 +636,7 @@
   {
    "key": "King of Hell | Normal",
    "count": 11,
-   "min": 21.0,
+   "min": 20.99,
    "p25": 23.99,
    "median": 27.67
   },
@@ -1032,7 +1049,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -1128,7 +1145,7 @@
    "pet": "Infernal Lord",
    "variant": "Normal",
    "key": "Infernal Lord | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -1240,7 +1257,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -1251,7 +1268,7 @@
    "stock": 20,
    "seller": "TraxStore",
    "seller_feedback_pct": 99.6,
-   "seller_reviews": 69043,
+   "seller_reviews": 69046,
    "url": "https://www.eldorado.gg/tap-simulator-shop/oi/566896e4-e03b-47be-3fc6-08df2db0e884",
    "pet": "Volcanic Devil",
    "variant": "Normal",
@@ -1384,7 +1401,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -1528,7 +1545,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -1752,7 +1769,7 @@
    "pet": "Inferno Dragon",
    "variant": "Normal",
    "key": "Inferno Dragon | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -1784,7 +1801,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -2072,7 +2089,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -2312,7 +2329,7 @@
    "pet": "Reanimation",
    "variant": "Shiny",
    "key": "Reanimation | Shiny",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -2328,7 +2345,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -2360,7 +2377,7 @@
    "pet": "Inferno Dragon",
    "variant": "Normal",
    "key": "Inferno Dragon | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -2440,7 +2457,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -2472,7 +2489,7 @@
    "pet": "Crystalline Colossus",
    "variant": "Normal",
    "key": "Crystalline Colossus | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -2488,7 +2505,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -2504,7 +2521,7 @@
    "pet": "Infernal Lord",
    "variant": "Normal",
    "key": "Infernal Lord | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -2568,7 +2585,7 @@
    "pet": "Hellfire Spirit",
    "variant": "Normal",
    "key": "Hellfire Spirit | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -2680,7 +2697,7 @@
    "pet": "Cinder Eye",
    "variant": "Normal",
    "key": "Cinder Eye | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -2968,7 +2985,7 @@
    "pet": "Shinigami",
    "variant": "Normal",
    "key": "Shinigami | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -3048,7 +3065,7 @@
    "pet": "Flame Fungi",
    "variant": "Normal",
    "key": "Flame Fungi | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -3064,7 +3081,7 @@
    "pet": "Soul Hunter",
    "variant": "Normal",
    "key": "Soul Hunter | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -3112,7 +3129,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -3512,7 +3529,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -3720,7 +3737,7 @@
    "pet": "Autumn Warden",
    "variant": "Normal",
    "key": "Autumn Warden | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -3880,7 +3897,7 @@
    "pet": "Diamond Piercer",
    "variant": "Golden",
    "key": "Diamond Piercer | Golden",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -3976,7 +3993,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -3992,7 +4009,7 @@
    "pet": "Oasis Spirit",
    "variant": "Normal",
    "key": "Oasis Spirit | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4072,7 +4089,7 @@
    "pet": "Flame Fungi",
    "variant": "Normal",
    "key": "Flame Fungi | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4152,7 +4169,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4216,7 +4233,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4232,7 +4249,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4296,7 +4313,7 @@
    "pet": "King Shroomie",
    "variant": "Normal",
    "key": "King Shroomie | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4312,7 +4329,7 @@
    "pet": "Autumn Warden",
    "variant": "Normal",
    "key": "Autumn Warden | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4408,7 +4425,7 @@
    "pet": "Reanimation",
    "variant": "Shiny",
    "key": "Reanimation | Shiny",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4488,7 +4505,7 @@
    "pet": "Flame Fungi",
    "variant": "Normal",
    "key": "Flame Fungi | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4504,7 +4521,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4584,7 +4601,7 @@
    "pet": "Diamond Piercer",
    "variant": "Normal",
    "key": "Diamond Piercer | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4607,7 +4624,7 @@
   {
    "id": "42df8c7f-c978-4cfc-31f1-08df302c5ea3",
    "title": "King of Hell | Secret III | (110%) x54.47m base Damage| 1 in 17.5M | Secret Hunter Enchantment | Tap Simulator Reborn | Cheapest + Fastest | 25% POWER🟢",
-   "price_usd": 21.67,
+   "price_usd": 20.99,
    "stock": 1,
    "seller": "LimberKing-rHk3",
    "seller_feedback_pct": 100.0,
@@ -4617,7 +4634,7 @@
    "variant": "Normal",
    "key": "King of Hell | Normal",
    "is_new": false,
-   "price_dropped": false,
+   "price_dropped": true,
    "first_seen": "2026-10-23T06:53:07+00:00"
   },
   {
@@ -4632,7 +4649,7 @@
    "pet": "Hellfire Spirit",
    "variant": "Normal",
    "key": "Hellfire Spirit | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4648,7 +4665,7 @@
    "pet": "Diamond Piercer",
    "variant": "Normal",
    "key": "Diamond Piercer | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4680,7 +4697,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -4952,7 +4969,7 @@
    "pet": "Inferno Dragon",
    "variant": "Normal",
    "key": "Inferno Dragon | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -5192,7 +5209,7 @@
    "pet": "Void Wraith",
    "variant": "Normal",
    "key": "Void Wraith | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -5352,7 +5369,7 @@
    "pet": "Angelic Amethyst",
    "variant": "Rainbow",
    "key": "Angelic Amethyst | Rainbow",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -5448,7 +5465,7 @@
    "pet": "Soul Hunter",
    "variant": "Normal",
    "key": "Soul Hunter | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -5848,7 +5865,7 @@
    "pet": "Void Wraith",
    "variant": "Normal",
    "key": "Void Wraith | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -5912,7 +5929,7 @@
    "pet": "Cinder Eye",
    "variant": "Golden",
    "key": "Cinder Eye | Golden",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -6008,7 +6025,7 @@
    "pet": "Angelic Amethyst",
    "variant": "Golden",
    "key": "Angelic Amethyst | Golden",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -6024,7 +6041,7 @@
    "pet": "King Shroomie",
    "variant": "Normal",
    "key": "King Shroomie | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -6040,7 +6057,7 @@
    "pet": "Reanimation",
    "variant": "Shiny",
    "key": "Reanimation | Shiny",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -6344,7 +6361,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -6376,7 +6393,7 @@
    "pet": "Soul Hunter",
    "variant": "Normal",
    "key": "Soul Hunter | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -6515,12 +6532,12 @@
    "stock": 1,
    "seller": "Alex-g08",
    "seller_feedback_pct": 99.3,
-   "seller_reviews": 1069,
+   "seller_reviews": 1070,
    "url": "https://www.eldorado.gg/tap-simulator-shop/oi/787e5bf5-564d-45d8-c9c8-08df2b834a19",
    "pet": "Infernal Lord",
    "variant": "Normal",
    "key": "Infernal Lord | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -6536,7 +6553,7 @@
    "pet": "Magma Hydra",
    "variant": "Normal",
    "key": "Magma Hydra | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -6568,7 +6585,7 @@
    "pet": "Inferno Dragon",
    "variant": "Normal",
    "key": "Inferno Dragon | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -6696,7 +6713,7 @@
    "pet": "Void Wraith",
    "variant": "Shiny",
    "key": "Void Wraith | Shiny",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -6840,7 +6857,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7016,7 +7033,7 @@
    "pet": "Inferno Dragon",
    "variant": "Normal",
    "key": "Inferno Dragon | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7160,7 +7177,7 @@
    "pet": "Anubis",
    "variant": "Normal",
    "key": "Anubis | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7240,7 +7257,7 @@
    "pet": "Inferno Dragon",
    "variant": "Normal",
    "key": "Inferno Dragon | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7288,7 +7305,7 @@
    "pet": "Anubis",
    "variant": "Shiny",
    "key": "Anubis | Shiny",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7416,7 +7433,7 @@
    "pet": "Void Wraith",
    "variant": "Normal",
    "key": "Void Wraith | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7464,7 +7481,7 @@
    "pet": "Oasis Spirit",
    "variant": "Normal",
    "key": "Oasis Spirit | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7480,7 +7497,7 @@
    "pet": "Reanimation",
    "variant": "Normal",
    "key": "Reanimation | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7503,7 +7520,7 @@
   {
    "id": "6aea60c5-a5ab-4a0c-8bc4-08df2e7a4a44",
    "title": "Infernal lord 1 in 2m secret 110% stats of best pet",
-   "price_usd": 4.0,
+   "price_usd": 2.8,
    "stock": 3,
    "seller": "Shark997689",
    "seller_feedback_pct": 100.0,
@@ -7513,7 +7530,7 @@
    "variant": "Normal",
    "key": "Infernal Lord | Normal",
    "is_new": false,
-   "price_dropped": false,
+   "price_dropped": true,
    "first_seen": "2026-10-23T06:53:07+00:00"
   },
   {
@@ -7576,7 +7593,7 @@
    "pet": "Dragon Tamer",
    "variant": "Normal",
    "key": "Dragon Tamer | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7720,7 +7737,7 @@
    "pet": "Volcanic Devil",
    "variant": "Rainbow",
    "key": "Volcanic Devil | Rainbow",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7768,7 +7785,7 @@
    "pet": "Diamond Piercer",
    "variant": "Normal",
    "key": "Diamond Piercer | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7848,7 +7865,7 @@
    "pet": "Primordial Pyramid",
    "variant": "Normal",
    "key": "Primordial Pyramid | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7896,7 +7913,7 @@
    "pet": "Reanimation",
    "variant": "Shiny",
    "key": "Reanimation | Shiny",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7976,7 +7993,7 @@
    "pet": "Void Wraith",
    "variant": "Normal",
    "key": "Void Wraith | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -7992,7 +8009,7 @@
    "pet": "Overcharged Robot",
    "variant": "Normal",
    "key": "Overcharged Robot | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -8088,7 +8105,7 @@
    "pet": "Nebula Cyborg",
    "variant": "Normal",
    "key": "Nebula Cyborg | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -8120,7 +8137,7 @@
    "pet": "Primordial Pyramid",
    "variant": "Rainbow",
    "key": "Primordial Pyramid | Rainbow",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -8152,7 +8169,7 @@
    "pet": "Moon Warden",
    "variant": "Rainbow",
    "key": "Moon Warden | Rainbow",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -8168,7 +8185,7 @@
    "pet": "Overcharged Robot",
    "variant": "Rainbow",
    "key": "Overcharged Robot | Rainbow",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -8200,7 +8217,7 @@
    "pet": "Electric Medusa",
    "variant": "Rainbow",
    "key": "Electric Medusa | Rainbow",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -8280,7 +8297,7 @@
    "pet": "Autumn Warden",
    "variant": "Normal",
    "key": "Autumn Warden | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -8344,7 +8361,7 @@
    "pet": "Void Wraith",
    "variant": "Normal",
    "key": "Void Wraith | Normal",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },
@@ -8568,7 +8585,7 @@
    "pet": "Reanimation",
    "variant": "Golden",
    "key": "Reanimation | Golden",
-   "is_new": true,
+   "is_new": false,
    "price_dropped": false,
    "first_seen": "2026-10-23T07:01:35+00:00"
   },

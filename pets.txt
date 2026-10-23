@@ -1,23 +1,49 @@
-# Pet names the scraper looks for in listing titles, one per line.
-# Built from the names that showed up in Eldorado listing titles on
-# 2026-10-22, not from the game's own data, so some may be missing.
-# Claude lists titles that look like pets but match nothing here
-# ("unknown_pet_titles" in data/latest.json). Add those names below.
-# Variants (Golden, Diamond, Rainbow, Shiny) are detected separately,
-# so only list the base name.
+# Pet names the scraper looks for in listing titles.
+# Built from names that showed up in Eldorado listing titles, not from the
+# game's own data, so some may be missing or misspelled.
+#
+#   Cinder Eye                      a pet name
+#   Infernal Lord = Inferno Lord    a pet name, then misspellings sellers use
+#   !Secret Hunter                  not a pet; never report it as unknown
+#
+# Only list the base name. Golden, Diamond, Rainbow and Shiny are detected
+# separately. Claude lists pet-like titles that match nothing here
+# ("unknown_pet_titles" in data/latest.json); add those names below.
 
-Cinder Eye
+Cinder Eye = Cinder Eyes
 Volcanic Devil
 Volcanic Angel
-Infernal Lord
+Infernal Lord = Inferno Lord, Internal Lord
 Dragon Tamer
-Void Wraith
+Void Wraith = Void Wrath, Voit Wrath
 Void Overseer
 First Light
 King of Hell
 Crystal Guardian
 Forsaken Knight
-Shinigami
+Shinigami = Sh1nigami
 Nevermore
 Eternal Emerald
 Cerberus
+Reanimation = Reanimatio
+Inferno Dragon
+Crystalline Colossus
+Hellfire Spirit = Helfire Spirit, Helfire, Hellfire
+Flame Fungi
+Soul Hunter
+Autumn Warden
+Oasis Spirit
+King Shroomie
+Diamond Piercer = Diamond Pierce
+Anubis
+Angelic Amethyst
+Magma Hydra
+Overcharged Robot
+Moon Warden
+Nebula Cyborg = Nebula Cyberg
+Electric Medusa
+Primordial Pyramid = Prymoridal Pyramid
+
+!Secret Hunter
+!Secret Bundle
+!Random Secret

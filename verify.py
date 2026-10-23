@@ -120,7 +120,8 @@ def main():
               f"{pets} pet listings ({share:.0%}) in {len(groups)} pet+variant groups")
         check(PASS if len(unknown) <= 15 else WARN, "unknown titles",
               f"{len(unknown)} pet-like titles matched no name in pets.txt")
-        bad = [d for d in deals if not (0 < d["price_usd"] < d["median_of_others"])]
+        base = lambda d: d.get("baseline_usd", d.get("median_of_others"))
+        bad = [d for d in deals if not (0 < d["price_usd"] < base(d))]
         check(FAIL if bad else PASS, "deal math",
               f"{len(deals)} deals flagged" + (f", {len(bad)} with impossible numbers" if bad else ", numbers consistent"))
         latest_dt = datetime.fromisoformat(latest["time_utc"])

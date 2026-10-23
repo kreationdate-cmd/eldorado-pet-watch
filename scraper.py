@@ -6,8 +6,9 @@ Runs once per hour on GitHub Actions. Each run:
      public listings API (the same JSON the website itself loads).
   2. Works out which pet (and variant: Golden, Diamond, Rainbow, Shiny)
      each listing is, using the names in pets.txt.
-  3. Compares each listing's price to the median price of the other
-     listings for the same pet + variant.
+  3. Compares each listing's price to the 25th-percentile price of the
+     other listings for the same pet + variant (the cheaper quarter of
+     the market), and flags it if it is 30%+ cheaper and saves $1+.
   4. Writes the results into the data/ folder, which the workflow
      commits back to the repo so Claude can read them.
 
@@ -35,8 +36,11 @@ API_URL = "https://www.eldorado.gg/api/v1/item-management/offers"
 GAME_ID = "350"            # Tap Simulator REBORN on Eldorado
 PAGE_SIZE = 50             # the API accepts up to 50 per page
 PAUSE_SECONDS = 2          # wait between pages, to be gentle on the site
-DEAL_THRESHOLD = 0.30      # 30% below the median counts as a deal
-MIN_COMPARABLES = 3        # need at least 3 other listings to trust a median
+DEAL_THRESHOLD = 0.30      # 30% below the baseline price counts as a deal
+BASELINE_PERCENTILE = 0.25 # baseline = 25th percentile of the other listings
+                           # (the cheaper quarter of the market). 0.5 = median.
+MIN_SAVING_USD = 1.00      # a deal must also save at least this many dollars
+MIN_COMPARABLES = 3        # need at least 3 other listings to trust a baseline
 SEEN_KEEP_DAYS = 7         # forget listings not seen for this many days
 
 ROOT = Path(__file__).parent
@@ -75,23 +79,41 @@ def clean(text):
 
 
 def load_pet_names():
-    """Read pets.txt: one pet name per line, # starts a comment."""
-    names = []
+    """Read pets.txt.
+
+    Line formats (# starts a comment):
+      Cinder Eye                      a pet name
+      Infernal Lord = Inferno Lord    a pet name plus misspellings
+      !Secret Hunter                  not a pet; never report it as unknown
+    """
+    pairs, ignore = [], []
     for line in PETS_FILE.read_text(encoding="utf-8").splitlines():
         line = line.split("#")[0].strip()
-        if line:
-            names.append(line)
-    # Longest names first, so "Void Overseer" wins over a shorter match.
-    return sorted(names, key=len, reverse=True)
+        if not line:
+            continue
+        if line.startswith("!"):
+            ignore.append(clean(line[1:]))
+            continue
+        name, _, extra = line.partition("=")
+        name = name.strip()
+        for alias in [name] + extra.split(","):
+            if alias.strip():
+                pairs.append((clean(alias), name))
+    # Longest spellings first, so "void overseer" wins over a shorter match.
+    pairs.sort(key=lambda p: len(p[0]), reverse=True)
+    return {"pairs": pairs, "ignore": ignore}
 
 
 def identify(title, pet_names):
     """Return (pet, variant) for a listing title, or (None, None)."""
     t = " " + clean(title) + " "
     pet = None
-    for name in pet_names:
-        if " " + clean(name) + " " in t:
+    for alias, name in pet_names["pairs"]:
+        if " " + alias + " " in t:
             pet = name
+            # Remove the name so a word inside it (the "diamond" in
+            # "Diamond Piercer") is not read as a variant.
+            t = t.replace(" " + alias + " ", " ")
             break
     if pet is None:
         return None, None
@@ -106,10 +128,23 @@ def identify(title, pet_names):
     return pet, variant
 
 
-def looks_like_unknown_pet(title):
+def looks_like_unknown_pet(title, pet_names):
     """A title that sounds like a pet but matched no name in pets.txt."""
-    t = clean(title)
+    t = " " + clean(title) + " "
+    if any(" " + phrase + " " in t for phrase in pet_names["ignore"]):
+        return False
     return bool(re.search(r"\bsecret\b|\b1 in \d|\bmythic", t))
+
+
+def percentile(values, fraction):
+    """Linear-interpolated percentile, e.g. fraction 0.25 = 25th percentile."""
+    v = sorted(values)
+    if len(v) == 1:
+        return v[0]
+    pos = (len(v) - 1) * fraction
+    low = int(pos)
+    high = min(low + 1, len(v) - 1)
+    return v[low] + (v[high] - v[low]) * (pos - low)
 
 
 # ---------------------------------------------------------------- download
@@ -178,7 +213,7 @@ def analyse(listings, pet_names, seen, run_time):
             continue
         pet, variant = identify(item["title"], pet_names)
         if pet is None:
-            if looks_like_unknown_pet(item["title"]):
+            if looks_like_unknown_pet(item["title"], pet_names):
                 unknown.append(item)
             continue
         item["pet"], item["variant"] = pet, variant
@@ -210,19 +245,23 @@ def analyse(listings, pet_names, seen, run_time):
             "key": key,
             "count": len(items),
             "min": min(prices),
+            "p25": round(percentile(prices, 0.25), 2),
             "median": round(statistics.median(prices), 2),
         })
         for item in items:
             others = [i["price_usd"] for i in items if i is not item]
             if len(others) < MIN_COMPARABLES:
                 continue
-            median = statistics.median(others)
-            if median <= 0:
+            baseline = percentile(others, BASELINE_PERCENTILE)
+            if baseline <= 0:
                 continue
-            discount = 1 - item["price_usd"] / median
-            if discount >= DEAL_THRESHOLD:
+            discount = 1 - item["price_usd"] / baseline
+            saving = baseline - item["price_usd"]
+            if discount >= DEAL_THRESHOLD and saving >= MIN_SAVING_USD:
                 deal = dict(item)
-                deal["median_of_others"] = round(median, 2)
+                deal["baseline_usd"] = round(baseline, 2)
+                deal["median_of_others"] = round(statistics.median(others), 2)
+                deal["saving_usd"] = round(saving, 2)
                 deal["discount_pct"] = round(discount * 100, 1)
                 deal["comparables"] = len(others)
                 deals.append(deal)
@@ -292,7 +331,9 @@ def main():
         "time_utc": stamp,
         "total_listings": len(listings),
         "pet_listings": len(pets),
-        "deal_threshold_pct": int(DEAL_THRESHOLD * 100),
+        "deal_rule": (f"{int(DEAL_THRESHOLD * 100)}%+ below the "
+                      f"{int(BASELINE_PERCENTILE * 100)}th-percentile price of other "
+                      f"listings for the same pet+variant, and saves ${MIN_SAVING_USD:.2f}+"),
         "deals": deals,
         "unknown_pet_titles": [
             {"title": u["title"], "price_usd": u["price_usd"], "url": u["url"]}

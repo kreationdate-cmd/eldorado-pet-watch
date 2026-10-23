@@ -1,6 +1,8 @@
 {
- "ok": false,
- "time_utc": "2026-10-23T16:39:08+00:00",
- "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
- "fail_streak": 1
+ "ok": true,
+ "time_utc": "2026-10-23T17:34:03+00:00",
+ "total_listings": 1108,
+ "pet_listings": 564,
+ "deals": 14,
+ "new_deals": 2
 }

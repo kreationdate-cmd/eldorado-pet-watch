@@ -232,11 +232,12 @@ def analyse(listings, pet_names, seen, run_time):
         item["is_new"] = prev is None
         item["price_dropped"] = bool(prev and item["price_usd"] < prev["last_price"])
         item["first_seen"] = prev["first_seen"] if prev else stamp
-        seen[item["id"]] = {
+        record = seen.setdefault(item["id"], {})
+        record.update({
             "first_seen": item["first_seen"],
             "last_seen": stamp,
             "last_price": item["price_usd"],
-        }
+        })
 
     deals, summary = [], []
     for key, items in sorted(groups.items()):
@@ -265,6 +266,19 @@ def analyse(listings, pet_names, seen, run_time):
                 deal["discount_pct"] = round(discount * 100, 1)
                 deal["comparables"] = len(others)
                 deals.append(deal)
+
+    # Remember when each listing first became a deal, so a check that runs
+    # every few hours can catch deals from the scrapes in between. A listing
+    # that stops being a deal loses its date, so a later price drop alerts again.
+    deal_ids = {d["id"] for d in deals}
+    for item in pets:
+        record = seen[item["id"]]
+        if item["id"] in deal_ids:
+            record.setdefault("deal_since", stamp)
+        else:
+            record.pop("deal_since", None)
+    for d in deals:
+        d["deal_since"] = seen[d["id"]]["deal_since"]
 
     deals.sort(key=lambda d: d["discount_pct"], reverse=True)
     return pets, unknown, deals, summary

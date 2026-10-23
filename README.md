@@ -5,9 +5,10 @@ Hourly price watch for Tap Simulator REBORN pets on Eldorado.gg.
 - `scraper.py` runs on GitHub Actions every hour at :05 (UTC). It reads Eldorado's
   public listings API (logged out, one request every 2 seconds, about 20 requests per run),
   groups listings by pet + variant using `pets.txt`, and flags anything 30% or more
-  below the median of the other listings for the same pet + variant.
-- Results go in `data/`. A Claude scheduled task reads them at :20 and pushes
-  deals to Charles's phone. Its prompt is in `CLAUDE_TASK_PROMPT.md`.
+  below the 25th-percentile price of the other listings for the same pet + variant
+  that also saves $1 or more.
+- Results go in `data/`. A Claude scheduled task reads them every 3 hours at :35 (UTC)
+  and pushes new deals to Charles's phone. Its prompt is in `CLAUDE_TASK_PROMPT.md`.
 
 ## Setup
 
@@ -29,7 +30,7 @@ the repo URL.
 
 ## Changing things
 
-- Threshold: `DEAL_THRESHOLD` in `scraper.py` (0.30 = 30%).
+- Deal rule: `DEAL_THRESHOLD` (0.30 = 30%), `BASELINE_PERCENTILE` (0.25) and `MIN_SAVING_USD` (1.00) in `scraper.py`.
 - Missing pets: add the name to `pets.txt`.
 - Stop it: Actions tab > "Scrape Eldorado" > "..." > Disable workflow.
 

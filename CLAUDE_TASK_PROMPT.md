@@ -1,4 +1,4 @@
-Hourly Eldorado pet deal check for Charles (Tap Simulator REBORN).
+Eldorado pet deal check for Charles (Tap Simulator REBORN). Runs every 3 hours, unattended.
 
 1. Run: git clone --depth 1 https://github.com/kreationdate-cmd/eldorado-pet-watch
    Then read eldorado-pet-watch/data/status.json and eldorado-pet-watch/data/latest.json.
@@ -11,7 +11,9 @@ Hourly Eldorado pet deal check for Charles (Tap Simulator REBORN).
 3. If latest.json time_utc is more than 2 hours old, call the PushNotification tool with
    "Pet watch: data is stale, last scrape <time_utc>." and stop.
 
-4. From latest.json "deals", keep only entries where is_new or price_dropped is true.
+4. From latest.json "deals", keep only entries whose deal_since is no more than 2 hours 30 minutes
+   before latest.json time_utc. These are the deals that appeared since the last 3-hourly check;
+   older ones were already sent.
    Each deal already meets "deal_rule": 30%+ below the 25th-percentile price of other listings
    for the same pet + variant, saving $1+.
    Check each one by reading its title against the other listings for that pet in "pets":

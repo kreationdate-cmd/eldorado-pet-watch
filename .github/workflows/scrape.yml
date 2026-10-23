@@ -1,0 +1,44 @@
+name: Scrape Eldorado
+
+on:
+  schedule:
+    - cron: "5 * * * *"     # every hour at minute 5 (UTC)
+  workflow_dispatch: {}      # adds a "Run workflow" button for testing
+
+permissions:
+  contents: write            # lets the job commit the data/ folder
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Scrape
+        id: scrape
+        run: python scraper.py
+        continue-on-error: true   # still commit status.json if it fails
+
+      - name: Commit data
+        run: |
+          git config user.name "pet-watch-bot"
+          git config user.email "pet-watch-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "data $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
+
+      - name: Fail the run if scraping failed
+        if: steps.scrape.outcome == 'failure'
+        run: exit 1
